@@ -122,6 +122,16 @@
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">起動</span></span><br><span class="line"> exec ssh-agent $SHELL</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">終了</span></span><br><span class="line"> ssh-agent -k</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">秘密鍵を追加</span></span><br><span class="line">ssh-add 秘密鍵へのファイルパス</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">全ての秘密鍵のフィンガープリント (ingerprints) を表示する</span></span><br><span class="line">Host</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">個別に削除する</span></span><br><span class="line">ssh-add -d 秘密鍵へのファイルパス</span><br><span class="line">ssh-add ~/.ssh/id_ecdsa_100 ~/.ssh/id_ecdsa_co</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="built_in">test</span></span></span><br><span class="line">ssh -T git@github.com</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">全て削除する</span></span><br><span class="line">ssh-add -D</span><br></pre></td></tr></table></figure>
 
+<p>SSH agentを使う</p>
+<p>SSH agentとは、公開鍵認証で使われる認証鍵を保持するプログラムです。</p>
+<blockquote>
+<p>.bashrcを使えば、ssh-agentコマンドを毎回入力しなくても、Git Bashを起動したときに自動的にssh-agentを起動することができるようになります。 例えば、.bashrcの最後に、次のようなコマンドを追加をします。</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">ssh-agent</span></span><br><span class="line">eval `ssh-agent`</span><br><span class="line">ssh-add</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>これでリモートリポジトリにアクセスする度に毎回パスフレーズを入力する必要はなくなりますが、これだけではセッションごとにパスフレーズを入力する必要があります。</p>
+</blockquote>
 <h2 id="管理多组密钥对"><a href="#管理多组密钥对" class="headerlink" title="管理多组密钥对"></a>管理多组密钥对</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Host github_p</span><br><span class="line">HostName github.com</span><br><span class="line">User git</span><br><span class="line">IdentityFile ~&#x2F;.ssh&#x2F;id_rsa_github_private</span><br><span class="line">IdentitiesOnly yes</span><br><span class="line">UseKeychain yes</span><br><span class="line">AddKeysToAgent yes</span><br><span class="line"></span><br><span class="line">Host github_w</span><br><span class="line">HostName github.com</span><br><span class="line">User git</span><br><span class="line">IdentityFile ~&#x2F;.ssh&#x2F;id_rsa_github_work</span><br><span class="line">IdentitiesOnly yes</span><br><span class="line">UseKeychain yes</span><br><span class="line">AddKeysToAgent yes</span><br></pre></td></tr></table></figure>
 
 <ul>
@@ -135,6 +145,8 @@
 <li><p><a href="https://laboradian.com/how-to-use-ssh-agent/#2_ssh-agent" target="_blank" rel="noopener">ssh-agent の使い方</a></p>
 </li>
 <li><p><a href="https://qiita.com/KeyMama/items/f9291bb125ee94b52b78#ssh%E3%82%AD%E3%83%BC%E3%82%92%E8%A4%87%E6%95%B0%E7%94%A8%E6%84%8F%E3%81%97%E3%81%9D%E3%82%8C%E3%81%9E%E3%82%8C%E3%81%AEgithub%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%A7%E5%85%AC%E9%96%8B%E9%8D%B5%E3%82%92%E8%A8%AD%E5%AE%9A" target="_blank" rel="noopener">複数のGitアカウントを手動切替不要で運用する</a></p>
+</li>
+<li><p><a href="https://www.granfairs.com/blog/staff/ssh-passphrase" target="_blank" rel="noopener">Windows Git BashでSSH接続をするときパスフレーズの入力を省略する</a></p>
 </li>
 </ul>
 
