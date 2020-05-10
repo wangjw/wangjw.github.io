@@ -7,12 +7,12 @@
   
   <title>SSH Config | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="SSHSSH とは？ （Secure Shell、セキュアシェル）というのは、通信プロトコルです 暗号化 と 認証 の仕組みを持っているため、安全な通信が実現できます。  12345# port default 22ssh ログインユーザー名@ホスト名# port 指定ssh -p 2222 ログインユーザー名@ホスト名  ssh-agent とは？ SSH で利用される認証方式   誰に見られて">
+  <meta name="description" content="SSH SSH とは？  （Secure Shell、セキュアシェル）というのは、通信プロトコルです 暗号化 と 認証 の仕組みを持っているため、安全な通信が実現できます。  12345# port default 22ssh ログインユーザー名@ホスト名# port 指定ssh -p 2222 ログインユーザー名@ホスト名 ssh-agent とは？  SSH で利用される認証方式    誰に見">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SSH Config">
-<meta property="og:url" content="http://yoursite.com/2020/05/05/linux/ssh-config/index.html">
+<meta property="og:url" content="http://yoursite.com/2020/05/05/config/ssh-config/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="SSHSSH とは？ （Secure Shell、セキュアシェル）というのは、通信プロトコルです 暗号化 と 認証 の仕組みを持っているため、安全な通信が実現できます。  12345# port default 22ssh ログインユーザー名@ホスト名# port 指定ssh -p 2222 ログインユーザー名@ホスト名  ssh-agent とは？ SSH で利用される認証方式   誰に見られて">
+<meta property="og:description" content="SSH SSH とは？  （Secure Shell、セキュアシェル）というのは、通信プロトコルです 暗号化 と 認証 の仕組みを持っているため、安全な通信が実現できます。  12345# port default 22ssh ログインユーザー名@ホスト名# port 指定ssh -p 2222 ログインユーザー名@ホスト名 ssh-agent とは？  SSH で利用される認証方式    誰に見">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/images/linux/ssh/generate-pubkey-pair.png">
 <meta property="og:image" content="http://yoursite.com/images/linux/ssh/send-pubkey-to-server.png">
@@ -74,9 +74,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-linux/ssh-config" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-config/ssh-config" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/05/05/linux/ssh-config/" class="article-date">
+    <a href="/2020/05/05/config/ssh-config/" class="article-date">
   <time datetime="2020-05-05T11:55:25.000Z" itemprop="datePublished">2020-05-05</time>
 </a>
     
@@ -100,18 +100,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h1><h2 id="SSH-とは？"><a href="#SSH-とは？" class="headerlink" title="SSH とは？"></a>SSH とは？</h2><blockquote>
+        <h1>SSH</h1>
+<h2 id="SSH-とは？">SSH とは？</h2>
+<blockquote>
 <p>（Secure Shell、セキュアシェル）というのは、通信プロトコルです 暗号化 と 認証 の仕組みを持っているため、安全な通信が実現できます。</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># port default 22</span></span><br><span class="line">ssh ログインユーザー名@ホスト名</span><br><span class="line"></span><br><span class="line"><span class="comment"># port 指定</span></span><br><span class="line">ssh -p 2222 ログインユーザー名@ホスト名</span><br></pre></td></tr></table></figure>
-
-<h3 id="ssh-agent-とは？"><a href="#ssh-agent-とは？" class="headerlink" title="ssh-agent とは？"></a>ssh-agent とは？</h3><blockquote>
+<h3 id="ssh-agent-とは？">ssh-agent とは？</h3>
+<blockquote>
 <p>SSH で利用される認証方式</p>
 </blockquote>
 <ul>
-<li><p>誰に見られてもよい 公開鍵</p>
+<li>
+<p>誰に見られてもよい 公開鍵</p>
 </li>
-<li><p>本人だけが持っている 秘密鍵</p>
+<li>
+<p>本人だけが持っている 秘密鍵</p>
 </li>
 </ul>
 <blockquote>
@@ -125,45 +129,48 @@
 <p>ssh-agent を起動して秘密鍵を登録しておけば、sshコマンドを実行した際に自動的に秘密鍵を適用して認証処理を行ってくれます。パスフレーズの入力は、秘密鍵の登録時に一度行うだけで済みます。</p>
 </blockquote>
 <p><img src="/images/linux/ssh/ssh_agent.gif" alt="ssh_agent"></p>
-<h3 id="ssh-agent-の起動"><a href="#ssh-agent-の起動" class="headerlink" title="ssh-agent の起動"></a>ssh-agent の起動</h3><blockquote>
+<h3 id="ssh-agent-の起動">ssh-agent の起動</h3>
+<blockquote>
 <p>一度起動すると、バックグラウンドで稼働し続けます。</p>
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">起動</span></span><br><span class="line"> exec ssh-agent $SHELL</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">終了</span></span><br><span class="line"> ssh-agent -k</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">秘密鍵を追加</span></span><br><span class="line">ssh-add 秘密鍵へのファイルパス</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">全ての秘密鍵のフィンガープリント (ingerprints) を表示する</span></span><br><span class="line">Host</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">個別に削除する</span></span><br><span class="line">ssh-add -d 秘密鍵へのファイルパス</span><br><span class="line">ssh-add ~/.ssh/id_ecdsa_100 ~/.ssh/id_ecdsa_co</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="built_in">test</span></span></span><br><span class="line">ssh -T git@github.com</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">全て削除する</span></span><br><span class="line">ssh-add -D</span><br></pre></td></tr></table></figure>
-
 <p>SSH agentを使う</p>
 <p>SSH agentとは、公開鍵認証で使われる認証鍵を保持するプログラムです。</p>
 <blockquote>
 <p>.bashrcを使えば、ssh-agentコマンドを毎回入力しなくても、Git Bashを起動したときに自動的にssh-agentを起動することができるようになります。 例えば、.bashrcの最後に、次のようなコマンドを追加をします。</p>
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">ssh-agent</span></span><br><span class="line">eval `ssh-agent`</span><br><span class="line">ssh-add</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>これでリモートリポジトリにアクセスする度に毎回パスフレーズを入力する必要はなくなりますが、これだけではセッションごとにパスフレーズを入力する必要があります。</p>
 </blockquote>
-<h2 id="管理多组密钥对"><a href="#管理多组密钥对" class="headerlink" title="管理多组密钥对"></a>管理多组密钥对</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Host github_p</span><br><span class="line">HostName github.com</span><br><span class="line">User git</span><br><span class="line">IdentityFile ~&#x2F;.ssh&#x2F;id_rsa_github_private</span><br><span class="line">IdentitiesOnly yes</span><br><span class="line">UseKeychain yes</span><br><span class="line">AddKeysToAgent yes</span><br><span class="line"></span><br><span class="line">Host github_w</span><br><span class="line">HostName github.com</span><br><span class="line">User git</span><br><span class="line">IdentityFile ~&#x2F;.ssh&#x2F;id_rsa_github_work</span><br><span class="line">IdentitiesOnly yes</span><br><span class="line">UseKeychain yes</span><br><span class="line">AddKeysToAgent yes</span><br></pre></td></tr></table></figure>
-
+<h2 id="管理多组密钥对">管理多组密钥对</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Host github_p</span><br><span class="line">HostName github.com</span><br><span class="line">User git</span><br><span class="line">IdentityFile ~&#x2F;.ssh&#x2F;id_rsa_github_private</span><br><span class="line">IdentitiesOnly yes</span><br><span class="line">UseKeychain yes</span><br><span class="line">AddKeysToAgent yes</span><br><span class="line"></span><br><span class="line">Host github_w</span><br><span class="line">HostName github.com</span><br><span class="line">User git</span><br><span class="line">IdentityFile ~&#x2F;.ssh&#x2F;id_rsa_github_work</span><br><span class="line">IdentitiesOnly yes</span><br><span class="line">UseKeychain yes</span><br><span class="line">AddKeysToAgent yes</span><br></pre></td></tr></table></figure>
 <ul>
 <li>User 指定登录用户名。</li>
 </ul>
 <p>当你克隆 coding 上的某个仓库时：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 原来</span></span><br><span class="line">$ git <span class="built_in">clone</span> git@git.coding.net:deepzz/test.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 现在</span></span><br><span class="line">$ git <span class="built_in">clone</span> coding:deepzz/test.git</span><br></pre></td></tr></table></figure>
-
 <hr>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><p><a href="https://laboradian.com/how-to-use-ssh-agent/#2_ssh-agent" target="_blank" rel="noopener">ssh-agent の使い方</a></p>
+<h2 id="Reference">Reference</h2>
+<ul>
+<li>
+<p><a href="https://laboradian.com/how-to-use-ssh-agent/#2_ssh-agent" target="_blank" rel="noopener">ssh-agent の使い方</a></p>
 </li>
-<li><p><a href="https://qiita.com/KeyMama/items/f9291bb125ee94b52b78#ssh%E3%82%AD%E3%83%BC%E3%82%92%E8%A4%87%E6%95%B0%E7%94%A8%E6%84%8F%E3%81%97%E3%81%9D%E3%82%8C%E3%81%9E%E3%82%8C%E3%81%AEgithub%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%A7%E5%85%AC%E9%96%8B%E9%8D%B5%E3%82%92%E8%A8%AD%E5%AE%9A" target="_blank" rel="noopener">複数のGitアカウントを手動切替不要で運用する</a></p>
+<li>
+<p><a href="https://qiita.com/KeyMama/items/f9291bb125ee94b52b78#ssh%E3%82%AD%E3%83%BC%E3%82%92%E8%A4%87%E6%95%B0%E7%94%A8%E6%84%8F%E3%81%97%E3%81%9D%E3%82%8C%E3%81%9E%E3%82%8C%E3%81%AEgithub%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%A7%E5%85%AC%E9%96%8B%E9%8D%B5%E3%82%92%E8%A8%AD%E5%AE%9A" target="_blank" rel="noopener">複数のGitアカウントを手動切替不要で運用する</a></p>
 </li>
-<li><p><a href="https://www.granfairs.com/blog/staff/ssh-passphrase" target="_blank" rel="noopener">Windows Git BashでSSH接続をするときパスフレーズの入力を省略する</a></p>
+<li>
+<p><a href="https://www.granfairs.com/blog/staff/ssh-passphrase" target="_blank" rel="noopener">Windows Git BashでSSH接続をするときパスフレーズの入力を省略する</a></p>
 </li>
-<li><p><a href="https://takanosho.wordpress.com/2013/01/11/input-ssh-key-passphrase-only-once-on-git-bash/" target="_blank" rel="noopener">Git:Git BashにてSSH鍵のパスフレーズ入力を初回のみにする</a></p>
+<li>
+<p><a href="https://takanosho.wordpress.com/2013/01/11/input-ssh-key-passphrase-only-once-on-git-bash/" target="_blank" rel="noopener">Git:Git BashにてSSH鍵のパスフレーズ入力を初回のみにする</a></p>
 </li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/05/05/linux/ssh-config/" data-id="ck9u1myyg000a1su42dbj2v8h" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/05/05/config/ssh-config/" data-id="cka132f6400012gu422ywheg2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
@@ -174,19 +181,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/05/08/linux/git/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/05/05/spring/spring-security/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Git
+          Spring Security
         
       </div>
     </a>
   
   
-    <a href="/2020/05/05/spring/spring-security/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/05/05/angular/tslint/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Spring Security</div>
+      <div class="article-nav-title">tslint</div>
     </a>
   
 </nav>
@@ -205,11 +212,11 @@
       <ul>
         
           <li>
-            <a href="/2020/05/08/linux/git/">Git</a>
+            <a href="/2020/05/10/config/hexo/">Change Hexo default theme blockquote</a>
           </li>
         
           <li>
-            <a href="/2020/05/05/linux/ssh-config/">SSH Config</a>
+            <a href="/2020/05/08/config/git/">Git</a>
           </li>
         
           <li>
@@ -217,11 +224,11 @@
           </li>
         
           <li>
-            <a href="/2020/05/05/angular/tslint/">tslint</a>
+            <a href="/2020/05/05/config/ssh-config/">SSH Config</a>
           </li>
         
           <li>
-            <a href="/2020/05/04/hello-world/">Hello World</a>
+            <a href="/2020/05/05/angular/tslint/">tslint</a>
           </li>
         
       </ul>
@@ -243,7 +250,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/" rel="tag">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/" rel="tag">angular</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fullstack/" rel="tag">fullstack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/poc/" rel="tag">poc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/" rel="tag">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/" rel="tag">angular</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fullstack/" rel="tag">fullstack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/" rel="tag">note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/poc/" rel="tag">poc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
     </div>
   </div>
 
@@ -253,7 +260,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/angular/" style="font-size: 10px;">angular</a> <a href="/tags/fullstack/" style="font-size: 20px;">fullstack</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/poc/" style="font-size: 20px;">poc</a> <a href="/tags/test/" style="font-size: 10px;">test</a>
+      <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/angular/" style="font-size: 10px;">angular</a> <a href="/tags/fullstack/" style="font-size: 20px;">fullstack</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/note/" style="font-size: 10px;">note</a> <a href="/tags/poc/" style="font-size: 20px;">poc</a> <a href="/tags/test/" style="font-size: 10px;">test</a>
     </div>
   </div>
 
