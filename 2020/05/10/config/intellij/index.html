@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Change Hexo default theme blockquote | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="plugin Google Java Style   https:&#x2F;&#x2F;google.github.io&#x2F;styleguide&#x2F;javaguide.html   Google IntelliJ java style: changing 2-space indentation to 4-space indentation   Integrate Google Java Style Guide in a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Change Hexo default theme blockquote">
+<meta property="og:url" content="http://yoursite.com/2020/05/10/config/intellij/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="plugin Google Java Style   https:&#x2F;&#x2F;google.github.io&#x2F;styleguide&#x2F;javaguide.html   Google IntelliJ java style: changing 2-space indentation to 4-space indentation   Integrate Google Java Style Guide in a">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-10T10:14:57.000Z">
+<meta property="article:modified_time" content="2020-05-11T15:31:44.216Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="note">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-config/intellij" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/10/config/intellij/" class="article-date">
+  <time datetime="2020-05-10T10:14:57.000Z" itemprop="datePublished">2020-05-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Change Hexo default theme blockquote
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1>plugin</h1>
+<h2 id="Google-Java-Style">Google Java Style</h2>
+<ul>
+<li>
+<p><a href="https://google.github.io/styleguide/javaguide.html" target="_blank" rel="noopener">https://google.github.io/styleguide/javaguide.html</a></p>
+</li>
+<li>
+<p><a href="https://stackoverflow.com/questions/50357628/google-intellij-java-style-changing-2-space-indentation-to-4-space-indentation" target="_blank" rel="noopener">Google IntelliJ java style: changing 2-space indentation to 4-space indentation</a></p>
+</li>
+<li>
+<p><a href="https://medium.com/@alexprut/integrate-google-java-style-guide-in-a-java-project-567abb6d7987" target="_blank" rel="noopener">Integrate Google Java Style Guide in a Java project</a></p>
+</li>
+<li>
+<p><a href="https://qiita.com/NagaokaKenichi/items/4203156e048d15c01e1b" target="_blank" rel="noopener">https://qiita.com/NagaokaKenichi/items/4203156e048d15c01e1b</a></p>
+</li>
+</ul>
+<h2 id="Google-checkstyle">Google checkstyle</h2>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--インデント--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">module</span> <span class="attr">name</span>=<span class="string">"Indentation"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"basicOffset"</span> <span class="attr">value</span>=<span class="string">"4"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"braceAdjustment"</span> <span class="attr">value</span>=<span class="string">"0"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"caseIndent"</span> <span class="attr">value</span>=<span class="string">"4"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"throwsIndent"</span> <span class="attr">value</span>=<span class="string">"4"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"lineWrappingIndentation"</span> <span class="attr">value</span>=<span class="string">"4"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"arrayInitIndent"</span> <span class="attr">value</span>=<span class="string">"4"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">module</span>&gt;</span></span><br><span class="line"></span><br><span class="line">     <span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">            Javadoc 一行目の概要チェックが句点「。」に対応していないので、このチェックを除外。</span></span><br><span class="line"><span class="comment">            &lt;module name="SummaryJavadoc"&gt;</span></span><br><span class="line"><span class="comment">            &lt;property name="forbiddenSummaryFragments" value="^@return the *|^This method returns |^A [&#123;]@code [a-zA-Z0-9]+[&#125;]( is a )"/&gt;</span></span><br><span class="line"><span class="comment">        &lt;/module&gt; --&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p><a href="http://biercoff.com/how-to-import-checkstyle-rules-into-intellij-idea-code-format-rules/" target="_blank" rel="noopener">How to import checkstyle rules into Intellij IDEA code format rules</a></p>
+</li>
+<li>
+<p><a href="https://ningg.top/tool-personal-intellij-idea-java-code-style/" target="_blank" rel="noopener">https://ningg.top/tool-personal-intellij-idea-java-code-style/</a></p>
+</li>
+<li>
+<p><a href="https://dev.to/tschaka1904/intellij-google-java-format-plugin-vs-intellij-java-google-style-xml-what-s-the-deal-197b" target="_blank" rel="noopener">IntelliJ google-java-format plugin vs IntelliJ java-google-style.xml - what’s the deal? </a></p>
+</li>
+<li>
+<p><a href="http://create-something.hatenadiary.jp/entry/2015/01/31/121332" target="_blank" rel="noopener">Google’s Java Style の CheckStyle を使う</a></p>
+</li>
+<li>
+<p><a href="https://stackoverflow.com/questions/56792141/checkstyle-comments" target="_blank" rel="noopener">CheckStyle comments</a></p>
+<blockquote>
+<blockquote>
+<p>CheckStyle throws an error How to solve it</p>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>CommentsIndentation doesn’t currently support comments being required at the first column. The default behavior is comments must be at the same indentation as the surrounding code.</p>
+</blockquote>
+<blockquote>
+<p>If you want to see that kind of behavior from CommentsIndentation you will need to create an issue at checkstyle on github. For now, I recommend disabling the check. Either remove it from the configuration or comment it out.</p>
+</blockquote>
+<h2 id="angular">angular</h2>
+<p>test</p>
+<blockquote>
+<p>intellij idea angular TS2307 cannot find module angular/core</p>
+</blockquote>
+<p>如果网上类似的问题并不丰富，也许该看一下，是否自己误操作了</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/05/10/config/intellij/" data-id="cka2nmwpg0000fou47kb8hkou" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/note/" rel="tag">note</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/05/10/config/hexo/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Change Hexo default theme blockquote
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/05/08/config/git/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Git</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/05/10/config/hexo/">Change Hexo default theme blockquote</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/10/config/intellij/">Change Hexo default theme blockquote</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/08/config/git/">Git</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/05/config/ssh-config/">SSH Config</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/05/spring/spring-security/">Spring Security</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/develop/">develop</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/develop/front/">front</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/" rel="tag">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/" rel="tag">angular</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fullstack/" rel="tag">fullstack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/" rel="tag">note</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/poc/" rel="tag">poc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/angular/" style="font-size: 10px;">angular</a> <a href="/tags/fullstack/" style="font-size: 20px;">fullstack</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/note/" style="font-size: 15px;">note</a> <a href="/tags/poc/" style="font-size: 20px;">poc</a> <a href="/tags/test/" style="font-size: 10px;">test</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">March 2013</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
