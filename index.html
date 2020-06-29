@@ -26,7 +26,7 @@
   
 <link rel="stylesheet" href="/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 <body>
   <div id="container">
@@ -66,10 +66,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-config/hexo" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-config/maven" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/05/10/config/hexo/" class="article-date">
-  <time datetime="2020-05-10T10:14:57.000Z" itemprop="datePublished">2020-05-10</time>
+    <a href="/2020/05/13/config/maven/" class="article-date">
+  <time datetime="2020-05-13T11:12:27.000Z" itemprop="datePublished">2020-05-13</time>
 </a>
     
   </div>
@@ -80,7 +80,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/10/config/hexo/">Change Hexo default theme blockquote</a>
+      <a class="article-title" href="/2020/05/13/config/maven/">maven pom.xml</a>
     </h1>
   
 
@@ -88,26 +88,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1>Css ode</h1>
-<blockquote>
-<p>themes\landscape\source\css_partial(article)</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">blockquote</span><br><span class="line">  font-family: font-serif</span><br><span class="line">  font-size: 1.4em</span><br><span class="line">  margin: line-height 20px</span><br><span class="line">  text-align: center</span><br><span class="line">  footer</span><br><span class="line">    font-size: font-size</span><br><span class="line">    margin: line-height 0</span><br><span class="line">    font-family: font-sans</span><br><span class="line">    cite</span><br><span class="line">      &amp;:before</span><br><span class="line">        content: <span class="string">"—"</span></span><br><span class="line">        padding: 0 0.5em</span><br></pre></td></tr></table></figure>
-<h2 id="before-vs-after-1">before vs after(1)</h2>
-<p><img src="/images/blog/hexo-blockquote1.png" alt="blockquote1"></p>
-<h2 id="before-vs-after-2">before vs after(2)</h2>
-<p><img src="/images/blog/hexo-blockquote2.png" alt="blockquote1"></p>
+        <h2 id="resources-mybatis">resources(mybatis)</h2>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">    <span class="tag">&lt;<span class="name">resources</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">directory</span>&gt;</span>src/main/java<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">includes</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">include</span>&gt;</span>**/*.xml<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">includes</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">filtering</span>&gt;</span>false<span class="tag">&lt;/<span class="name">filtering</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">directory</span>&gt;</span>src/main/resources<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">filtering</span>&gt;</span>false<span class="tag">&lt;/<span class="name">filtering</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">excludes</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">exclude</span>&gt;</span>context.xml<span class="tag">&lt;/<span class="name">exclude</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">excludes</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <hr>
-<h1>Reference</h1>
+<h2 id="Reference">Reference</h2>
 <ul>
-<li><a href="https://www.jianshu.com/p/f078e697594d" target="_blank" rel="noopener">用 hexo+github 搭博客</a></li>
-<li><a href="https://saruwakakun.com/html-css/reference/blockquote" target="_blank" rel="noopener">CSS で作る！魅力的な引用デザインのサンプル</a></li>
+<li><a href="https://my.oschina.net/anxiaole/blog/1613348" target="_blank" rel="noopener">maven 的 pom.xml 中 resources 标签介绍</a></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/05/10/config/hexo/" data-id="cka1434f5000dxcu436ft6yg2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/05/13/config/maven/" data-id="cka57rnjz0000zwu457r41i2j" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/note/" rel="tag">note</a></li></ul>
@@ -119,10 +111,127 @@
 
 
   
-    <article id="post-config/intellij" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-angular/angular-event-emitter" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/05/10/config/intellij/" class="article-date">
-  <time datetime="2020-05-10T10:14:57.000Z" itemprop="datePublished">2020-05-10</time>
+    <a href="/2020/05/13/angular/angular-event-emitter/" class="article-date">
+  <time datetime="2020-05-13T04:44:51.000Z" itemprop="datePublished">2020-05-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/develop/">develop</a>►<a class="article-category-link" href="/categories/develop/front/">front</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/13/angular/angular-event-emitter/">angular-event-emitter</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="angular-event-emitter-的理解">angular-event-emitter 的理解</h2>
+<ul>
+<li>
+<p>src/app/item-detail/item-detail.component.html</p>
+<figure class="highlight html"><figcaption><span>src/app/item-detail/item-detail.component.html (template)</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">""</span> [<span class="attr">style.display</span>]=<span class="string">"displayNone"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> [<span class="attr">style.text-decoration</span>]=<span class="string">"lineThrough"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> (<span class="attr">click</span>)=<span class="string">"delete()"</span>&gt;</span>Delete<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>src/app/item-detail/item-detail.component.ts</p>
+<figure class="highlight ts"><figcaption><span>src/app/item-detail/item-detail.component.ts (deleteRequest)</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// This component makes a request but it can't actually delete a hero.</span></span><br><span class="line"><span class="comment">// deleteRequest() 事件触发时，Angular 调用父组件的 deleteItem 方法</span></span><br><span class="line"><span class="comment">// 在 \$event 变量中传入要删除的英雄（来自 ItemDetail）。</span></span><br><span class="line"><span class="meta">@Output</span>() deleteRequest = <span class="keyword">new</span> EventEmitter&lt;Item&gt;();</span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span>() &#123;</span><br><span class="line"><span class="keyword">this</span>.deleteRequest.emit(<span class="keyword">this</span>.item);</span><br><span class="line"><span class="keyword">this</span>.displayNone = <span class="keyword">this</span>.displayNone ? <span class="string">''</span> : <span class="string">'none'</span>;</span><br><span class="line"><span class="keyword">this</span>.lineThrough = <span class="keyword">this</span>.lineThrough ? <span class="string">''</span> : <span class="string">'line-through'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>src/app/app.component.html</p>
+<figure class="highlight html"><figcaption><span>src/app/app.component.html (event-binding-to-component)</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">//有个宿主的父组件，绑定了 ItemDetailComponent 的</span><br><span class="line">//deleteRequest 事件。</span><br><span class="line"><span class="tag">&lt;<span class="name">app-item-detail</span> (<span class="attr">deleteRequest</span>)=<span class="string">"deleteItem(\$event)"</span> [<span class="attr">item</span>]=<span class="string">"currentItem"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">app-item-detail</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Output">@Output()</h2>
+<ul>
+<li>
+<p>src/app/item-output/item-output.component.ts</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Output</span>() newItemEvent = <span class="keyword">new</span> EventEmitter&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">...</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> ItemOutputComponent &#123;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Output</span>() newItemEvent = <span class="keyword">new</span> EventEmitter&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 当用户单击 UI 中的 “Add” 按钮时，子组件会让父组件知道该事件，并将该数据传给父组件。</span></span><br><span class="line">  addNewItem(value: <span class="built_in">string</span>) &#123;</span><br><span class="line">    <span class="keyword">this</span>.newItemEvent.emit(value);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>src/app/item-output/item-output.component.html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span>Add an item: <span class="tag">&lt;<span class="name">input</span> #<span class="attr">newItem</span> /&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> (<span class="attr">click</span>)=<span class="string">"addNewItem(newItem.value)"</span>&gt;</span>Add to parent's list<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>
+<p>src/app/item-output/item-output.component.ts</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Output</span>() newItemEvent = <span class="keyword">new</span> EventEmitter&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>src/app/app.component.ts</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppComponent &#123;</span><br><span class="line">  items = [<span class="string">'item1'</span>, <span class="string">'item2'</span>, <span class="string">'item3'</span>, <span class="string">'item4'</span>];</span><br><span class="line"></span><br><span class="line">  addItem(newItem: <span class="built_in">string</span>) &#123;</span><br><span class="line">    <span class="keyword">this</span>.items.push(newItem);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>src/app/app.component.html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--Angular 将子组件的 newItemEvent 事件连接到父组件中的方法 addItem() --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">app-item-output</span> (<span class="attr">newItemEvent</span>)=<span class="string">"addItem($event)"</span>&gt;</span><span class="tag">&lt;/<span class="name">app-item-output</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="双向绑定-…">双向绑定 [(…)]</h2>
+<blockquote>
+<p>双向绑定会做两件事：</p>
+<ol>
+<li>
+<p>设置特定的元素属性。</p>
+</li>
+<li>
+<p>监听元素的变更事件。</p>
+</li>
+</ol>
+</blockquote>
+<ul>
+<li>
+<p>src/app/sizer.component.ts</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Component, Input, Output, EventEmitter &#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Component</span>(&#123;</span><br><span class="line">  selector: <span class="string">'app-sizer'</span>,</span><br><span class="line">  templateUrl: <span class="string">'./sizer.component.html'</span>,</span><br><span class="line">  styleUrls: [<span class="string">'./sizer.component.css'</span>],</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> SizerComponent &#123;</span><br><span class="line">  <span class="comment">//SizerComponent 就是用的这种模式。</span></span><br><span class="line">  <span class="comment">// 它具有一个名为 size 的值属性和一个与之相伴的 sizeChange 事</span></span><br><span class="line">  <span class="meta">@Input</span>() size: <span class="built_in">number</span> | <span class="built_in">string</span>;</span><br><span class="line">  <span class="meta">@Output</span>() sizeChange = <span class="keyword">new</span> EventEmitter&lt;<span class="built_in">number</span>&gt;();</span><br><span class="line"></span><br><span class="line">  dec() &#123;</span><br><span class="line">    <span class="keyword">this</span>.resize(<span class="number">-1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  inc() &#123;</span><br><span class="line">    <span class="keyword">this</span>.resize(+<span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  resize(delta: <span class="built_in">number</span>) &#123;</span><br><span class="line">    <span class="keyword">this</span>.size = <span class="built_in">Math</span>.min(<span class="number">40</span>, <span class="built_in">Math</span>.max(<span class="number">8</span>, +<span class="keyword">this</span>.size + delta));</span><br><span class="line">    <span class="keyword">this</span>.sizeChange.emit(<span class="keyword">this</span>.size);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>src/app/sizer.component.html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- size 的初始值来自属性绑定的输入值。</span></span><br><span class="line"><span class="comment">单击按钮可在最小值/最大值范围内增大或减小 size，</span></span><br><span class="line"><span class="comment">然后带上调整后的大小发出 sizeChange 事件。 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> (<span class="attr">click</span>)=<span class="string">"dec()"</span> <span class="attr">title</span>=<span class="string">"smaller"</span>&gt;</span>-<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> (<span class="attr">click</span>)=<span class="string">"inc()"</span> <span class="attr">title</span>=<span class="string">"bigger"</span>&gt;</span>+<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> [<span class="attr">style.font-size.px</span>]=<span class="string">"size"</span>&gt;</span>FontSize: &#123;&#123;size&#125;&#125;px<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>
+<p>AppComponent.fontSize 被双向绑定到 SizerComponent：<br>
+src/app/app.component.html (two-way-1)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- AppComponent.fontSize 被双向绑定到 SizerComponent： --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">app-sizer</span> [(<span class="attr">size</span>)]=<span class="string">"fontSizePx"</span>&gt;</span><span class="tag">&lt;/<span class="name">app-sizer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> [<span class="attr">style.font-size.px</span>]=<span class="string">"fontSizePx"</span>&gt;</span>Resizable Text<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>src/app/app.component.ts</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fontSizePx = <span class="number">16</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="Reference">Reference</h2>
+<p><a href="https://angular.cn/guide/template-syntax#target-event" target="_blank" rel="noopener">使用 EventEmitter 实现自定义事件</a></p>
+<p><a href="https://angular.cn/guide/template-syntax#in-the-parent-1" target="_blank" rel="noopener">模板语法</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/05/13/angular/angular-event-emitter/" data-id="cka6rzyk500000gu4c1n0gkvk" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular/" rel="tag">angular</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-spring/spring-mybatis" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/13/spring/spring-mybatis/" class="article-date">
+  <time datetime="2020-05-12T17:48:15.000Z" itemprop="datePublished">2020-05-13</time>
 </a>
     
   </div>
@@ -133,7 +242,55 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/10/config/intellij/">Change Hexo default theme blockquote</a>
+      <a class="article-title" href="/2020/05/13/spring/spring-mybatis/">Spring mybatis problems</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="mybatis-error">mybatis error</h2>
+<p>Error setting non null for parameter #1 with JdbcType BIGINT</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"message"</span>: <span class="string">"nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping&#123;property='pkgId', mode=IN, javaType=class java.lang.String, jdbcType=BIGINT, numericScale=null, resultMapId='null',</span></span><br><span class="line"><span class="string">jdbcTypeName='null', expression='null'&#125;. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType BIGINT . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: java.lang.Long cannot be cast to java.lang.</span></span><br><span class="line"><span class="string">String"</span>,</span><br><span class="line"></span><br><span class="line"><span class="string">"trace"</span>: <span class="string">"org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping:</span></span><br><span class="line"><span class="string">ParameterMapping&#123;property='pkgId', mode=IN, javaType=class java.lang.String, jdbcType=BIGINT, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'&#125;.</span></span><br><span class="line"><span class="string">Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType BIGINT . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: java.lang.Long cannot be cast to java.lang.String\r\n\tat org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)\r\n\tat</span></span><br></pre></td></tr></table></figure>
+<h2 id="solution">solution</h2>
+<h3 id="before">before</h3>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"getDetailsTree"</span> <span class="attr">parameterType</span>=<span class="string">"java.lang.String"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">resultMap</span>=<span class="string">"treeResultMap"</span>&gt;</span></span><br><span class="line">	...</span><br><span class="line">   and pkg.pkg_id = #&#123;pkgId, jdbcType=BIGINT&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="after">after</h3>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"getDetailsTree"</span> <span class="attr">parameterType</span>=<span class="string">"java.lang.Long"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">resultMap</span>=<span class="string">"treeResultMap"</span>&gt;</span></span><br><span class="line">	...</span><br><span class="line">   and pkg.pkg_id = #&#123;pkgId, jdbcType=BIGINT&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="Reference">Reference</h2>
+<p><a href="https://blog.csdn.net/weixin_41315469/article/details/79865197" target="_blank" rel="noopener">java.lang.Long cannot be cast to java.lang.Integer</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/05/13/spring/spring-mybatis/" data-id="cka47aovd00072su4bmq0eeyl" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-config/intellij" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/12/config/intellij/" class="article-date">
+  <time datetime="2020-05-11T15:47:37.000Z" itemprop="datePublished">2020-05-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/12/config/intellij/">Intellij Plugin</a>
     </h1>
   
 
@@ -155,6 +312,10 @@
 </li>
 <li>
 <p><a href="https://qiita.com/NagaokaKenichi/items/4203156e048d15c01e1b" target="_blank" rel="noopener">https://qiita.com/NagaokaKenichi/items/4203156e048d15c01e1b</a></p>
+</li>
+<li>
+<p>xml 設定<br>
+<img src="/images/config/google_style_format.png" alt="blockquote1"></p>
 </li>
 </ul>
 <h2 id="Google-checkstyle">Google checkstyle</h2>
@@ -188,16 +349,73 @@
 <p>If you want to see that kind of behavior from CommentsIndentation you will need to create an issue at checkstyle on github. For now, I recommend disabling the check. Either remove it from the configuration or comment it out.</p>
 </blockquote>
 <h2 id="angular">angular</h2>
-<p>test</p>
 <blockquote>
 <p>intellij idea angular TS2307 cannot find module angular/core</p>
 </blockquote>
-<p>如果网上类似的问题并不丰富，也许该看一下，是否自己误操作了</p>
+<p>如果网上类似的问题并不多，也许该看一下，是否自己误操作了</p>
+<h2 id="angular-debug">angular debug</h2>
+<ul>
+<li><a href="https://itnext.io/debugging-your-angular-application-in-intellij-idea-411a9b08759f" target="_blank" rel="noopener">Debugging your Angular application in Intellij IDEA</a></li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/05/10/config/intellij/" data-id="cka2nmwpg0000fou47kb8hkou" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/05/12/config/intellij/" data-id="cka1x7jko00022su44n5e4k0c" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/note/" rel="tag">note</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-config/hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/10/config/hexo/" class="article-date">
+  <time datetime="2020-05-10T10:14:57.000Z" itemprop="datePublished">2020-05-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/10/config/hexo/">hexo - Change Hexo default theme blockquote</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1>Css code</h1>
+<blockquote>
+<p>themes\landscape\source\css_partial(article)</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">blockquote</span><br><span class="line">  font-family: font-serif</span><br><span class="line">  font-size: 1.4em</span><br><span class="line">  margin: line-height 20px</span><br><span class="line">  text-align: center</span><br><span class="line">  footer</span><br><span class="line">    font-size: font-size</span><br><span class="line">    margin: line-height 0</span><br><span class="line">    font-family: font-sans</span><br><span class="line">    cite</span><br><span class="line">      &amp;:before</span><br><span class="line">        content: <span class="string">"—"</span></span><br><span class="line">        padding: 0 0.5em</span><br></pre></td></tr></table></figure>
+<h2 id="before-vs-after-1">before vs after(1)</h2>
+<p><img src="/images/blog/hexo-blockquote1.png" alt="blockquote1"></p>
+<h2 id="before-vs-after-2">before vs after(2)</h2>
+<p><img src="/images/blog/hexo-blockquote2.png" alt="blockquote1"></p>
+<hr>
+<h1>Reference</h1>
+<ul>
+<li><a href="https://www.jianshu.com/p/f078e697594d" target="_blank" rel="noopener">用 hexo+github 搭博客</a></li>
+<li><a href="https://saruwakakun.com/html-css/reference/blockquote" target="_blank" rel="noopener">CSS で作る！魅力的な引用デザインのサンプル</a></li>
+<li><a href="https://github.com/hexojs/hexo/issues/3163" target="_blank" rel="noopener">hexo: command not found path</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/05/10/config/hexo/" data-id="cka1434f5000dxcu436ft6yg2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/note/" rel="tag">note</a></li></ul>
@@ -526,152 +744,6 @@
 
 
   
-    <article id="post-db/db-key" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/10/23/db/db-key/" class="article-date">
-  <time datetime="2019-10-23T10:14:57.000Z" itemprop="datePublished">2019-10-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/develop/">develop</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/23/db/db-key/">Full Stack Develop</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1>Full Stack Develop architecture</h1>
-<p><img src="/images/poc/fullstack.png" alt="generate"></p>
-
-
-<hr>
-<h2 id="Reference">Reference</h2>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/23/db/db-key/" data-id="cka1434f6000gxcu42lhe9ikg" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fullstack/" rel="tag">fullstack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/poc/" rel="tag">poc</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-db/db-postgresql" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/10/23/db/db-postgresql/" class="article-date">
-  <time datetime="2019-10-23T10:14:57.000Z" itemprop="datePublished">2019-10-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/develop/">develop</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/23/db/db-postgresql/">Full Stack Develop</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1>Full Stack Develop architecture</h1>
-<p><img src="/images/poc/fullstack.png" alt="generate"></p>
-
-
-<hr>
-<h2 id="タイムスタンプ">タイムスタンプ</h2>
-<p><a href="https://www.postgresql.jp/document/9.4/html/datatype-datetime.html" target="_blank" rel="noopener">table</a></p>
-<hr>
-<h2 id="Reference">Reference</h2>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/23/db/db-postgresql/" data-id="cka1434f9000lxcu4egcwa6i5" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fullstack/" rel="tag">fullstack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/poc/" rel="tag">poc</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-poc/fullstack" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/10/23/poc/fullstack/" class="article-date">
-  <time datetime="2019-10-23T10:14:57.000Z" itemprop="datePublished">2019-10-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/develop/">develop</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/23/poc/fullstack/">Full Stack Develop</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1>Full Stack Develop architecture</h1>
-<p><img src="/images/poc/fullstack.png" alt="generate"></p>
- 
-<hr>
-<h2 id="Reference">Reference</h2>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/23/poc/fullstack/" data-id="cka1434fa000oxcu47rxofggf" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fullstack/" rel="tag">fullstack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/poc/" rel="tag">poc</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -690,23 +762,23 @@
       <ul>
         
           <li>
-            <a href="/2020/05/10/config/hexo/">Change Hexo default theme blockquote</a>
+            <a href="/2020/05/13/config/maven/">maven pom.xml</a>
           </li>
         
           <li>
-            <a href="/2020/05/10/config/intellij/">Change Hexo default theme blockquote</a>
+            <a href="/2020/05/13/angular/angular-event-emitter/">angular-event-emitter</a>
           </li>
         
           <li>
-            <a href="/2020/05/08/config/git/">Git</a>
+            <a href="/2020/05/13/spring/spring-mybatis/">Spring mybatis problems</a>
           </li>
         
           <li>
-            <a href="/2020/05/05/config/ssh-config/">SSH Config</a>
+            <a href="/2020/05/12/config/intellij/">Intellij Plugin</a>
           </li>
         
           <li>
-            <a href="/2020/05/05/spring/spring-security/">Spring Security</a>
+            <a href="/2020/05/10/config/hexo/">hexo - Change Hexo default theme blockquote</a>
           </li>
         
       </ul>
@@ -738,7 +810,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/angular/" style="font-size: 10px;">angular</a> <a href="/tags/fullstack/" style="font-size: 20px;">fullstack</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/note/" style="font-size: 15px;">note</a> <a href="/tags/poc/" style="font-size: 20px;">poc</a> <a href="/tags/test/" style="font-size: 10px;">test</a>
+      <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/angular/" style="font-size: 15px;">angular</a> <a href="/tags/fullstack/" style="font-size: 20px;">fullstack</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/note/" style="font-size: 20px;">note</a> <a href="/tags/poc/" style="font-size: 20px;">poc</a> <a href="/tags/test/" style="font-size: 10px;">test</a>
     </div>
   </div>
 

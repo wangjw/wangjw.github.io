@@ -5,14 +5,19 @@
   
 
   
-  <title>Archives: 2013/3 | Hexo</title>
+  <title>maven pom.xml | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2013/03/index.html">
+  <meta name="description" content="resources(mybatis) 123456789101112131415161718    &lt;resources&gt;        &lt;resource&gt;            &lt;directory&gt;src&#x2F;main&#x2F;java&lt;&#x2F;directory&gt;            &lt;includes&gt;                &lt;i">
+<meta property="og:type" content="article">
+<meta property="og:title" content="maven pom.xml">
+<meta property="og:url" content="http://yoursite.com/2020/05/13/config/maven/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="resources(mybatis) 123456789101112131415161718    &lt;resources&gt;        &lt;resource&gt;            &lt;directory&gt;src&#x2F;main&#x2F;java&lt;&#x2F;directory&gt;            &lt;includes&gt;                &lt;i">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-13T11:12:27.000Z">
+<meta property="article:modified_time" content="2020-05-13T12:49:45.025Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="note">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -64,40 +69,60 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2013" class="archive-year">2013</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2013/03/09/android-basic-fundamentals/" class="archive-article-date">
-  <time datetime="2013-03-09T11:46:25.000Z" itemprop="datePublished">Mar 9</time>
+        <section id="main"><article id="post-config/maven" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/13/config/maven/" class="article-date">
+  <time datetime="2020-05-13T11:12:27.000Z" itemprop="datePublished">2020-05-13</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2013/03/09/android-basic-fundamentals/">Android Fundamentals</a>
+    <h1 class="article-title" itemprop="name">
+      maven pom.xml
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="resources-mybatis">resources(mybatis)</h2>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">    <span class="tag">&lt;<span class="name">resources</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">directory</span>&gt;</span>src/main/java<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">includes</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">include</span>&gt;</span>**/*.xml<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">includes</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">filtering</span>&gt;</span>false<span class="tag">&lt;/<span class="name">filtering</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">directory</span>&gt;</span>src/main/resources<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">filtering</span>&gt;</span>false<span class="tag">&lt;/<span class="name">filtering</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">excludes</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">exclude</span>&gt;</span>context.xml<span class="tag">&lt;/<span class="name">exclude</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">excludes</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="Reference">Reference</h2>
+<ul>
+<li><a href="https://my.oschina.net/anxiaole/blog/1613348" target="_blank" rel="noopener">maven 的 pom.xml 中 resources 标签介绍</a></li>
+</ul>
 
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/05/13/config/maven/" data-id="cka57rnjz0000zwu457r41i2j" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/note/" rel="tag">note</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/13/angular/angular-event-emitter/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">angular-event-emitter</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         

@@ -5,23 +5,19 @@
   
 
   
-  <title>Full Stack Develop | Hexo</title>
+  <title>Spring mybatis problems | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Full Stack Develop architecture     Reference">
+  <meta name="description" content="mybatis error Error setting non null for parameter #1 with JdbcType BIGINT 1234567&quot;message&quot;: &quot;nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: Parameter">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Full Stack Develop">
-<meta property="og:url" content="http://yoursite.com/2019/10/23/poc/fullstack/index.html">
+<meta property="og:title" content="Spring mybatis problems">
+<meta property="og:url" content="http://yoursite.com/2020/05/13/spring/spring-mybatis/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Full Stack Develop architecture     Reference">
+<meta property="og:description" content="mybatis error Error setting non null for parameter #1 with JdbcType BIGINT 1234567&quot;message&quot;: &quot;nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: Parameter">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/images/poc/fullstack.png">
-<meta property="article:published_time" content="2019-10-23T10:14:57.000Z">
-<meta property="article:modified_time" content="2020-05-08T04:07:00.634Z">
+<meta property="article:published_time" content="2020-05-12T17:48:15.000Z">
+<meta property="article:modified_time" content="2020-05-13T13:54:13.293Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="poc">
-<meta property="article:tag" content="fullstack">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/images/poc/fullstack.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -72,16 +68,12 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-poc/fullstack" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-spring/spring-mybatis" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/10/23/poc/fullstack/" class="article-date">
-  <time datetime="2019-10-23T10:14:57.000Z" itemprop="datePublished">2019-10-23</time>
+    <a href="/2020/05/13/spring/spring-mybatis/" class="article-date">
+  <time datetime="2020-05-12T17:48:15.000Z" itemprop="datePublished">2020-05-13</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/develop/">develop</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -90,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Full Stack Develop
+      Spring mybatis problems
     </h1>
   
 
@@ -98,39 +90,44 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1>Full Stack Develop architecture</h1>
-<p><img src="/images/poc/fullstack.png" alt="generate"></p>
- 
+        <hr>
+<h2 id="mybatis-error">mybatis error</h2>
+<p>Error setting non null for parameter #1 with JdbcType BIGINT</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"message"</span>: <span class="string">"nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping&#123;property='pkgId', mode=IN, javaType=class java.lang.String, jdbcType=BIGINT, numericScale=null, resultMapId='null',</span></span><br><span class="line"><span class="string">jdbcTypeName='null', expression='null'&#125;. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType BIGINT . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: java.lang.Long cannot be cast to java.lang.</span></span><br><span class="line"><span class="string">String"</span>,</span><br><span class="line"></span><br><span class="line"><span class="string">"trace"</span>: <span class="string">"org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping:</span></span><br><span class="line"><span class="string">ParameterMapping&#123;property='pkgId', mode=IN, javaType=class java.lang.String, jdbcType=BIGINT, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'&#125;.</span></span><br><span class="line"><span class="string">Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType BIGINT . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.lang.ClassCastException: java.lang.Long cannot be cast to java.lang.String\r\n\tat org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)\r\n\tat</span></span><br></pre></td></tr></table></figure>
+<h2 id="solution">solution</h2>
+<h3 id="before">before</h3>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"getDetailsTree"</span> <span class="attr">parameterType</span>=<span class="string">"java.lang.String"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">resultMap</span>=<span class="string">"treeResultMap"</span>&gt;</span></span><br><span class="line">	...</span><br><span class="line">   and pkg.pkg_id = #&#123;pkgId, jdbcType=BIGINT&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="after">after</h3>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"getDetailsTree"</span> <span class="attr">parameterType</span>=<span class="string">"java.lang.Long"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">resultMap</span>=<span class="string">"treeResultMap"</span>&gt;</span></span><br><span class="line">	...</span><br><span class="line">   and pkg.pkg_id = #&#123;pkgId, jdbcType=BIGINT&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="Reference">Reference</h2>
+<p><a href="https://blog.csdn.net/weixin_41315469/article/details/79865197" target="_blank" rel="noopener">java.lang.Long cannot be cast to java.lang.Integer</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/23/poc/fullstack/" data-id="cka1434fa000oxcu47rxofggf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/05/13/spring/spring-mybatis/" data-id="cka47aovd00072su4bmq0eeyl" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fullstack/" rel="tag">fullstack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/poc/" rel="tag">poc</a></li></ul>
-
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2019/10/23/db/db-postgresql/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/05/13/angular/angular-event-emitter/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Full Stack Develop
+          angular-event-emitter
         
       </div>
     </a>
   
   
-    <a href="/2013/03/09/android-basic-fundamentals/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/05/12/config/intellij/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Android Fundamentals</div>
+      <div class="article-nav-title">Intellij Plugin</div>
     </a>
   
 </nav>
